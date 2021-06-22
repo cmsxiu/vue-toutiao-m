@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import App from '@/App.vue'
+import router from '@/router'
+import store from '@/store'
 
 // 引入 vant
 import Vant from 'vant'
@@ -11,7 +11,10 @@ import 'vant/lib/index.css'
 import 'amfe-flexible'
 
 // 引入axios
-import './utils/request.js'
+import '@/utils/request.js'
+
+// 引入icon
+import '@/styles/global.less'
 
 Vue.use(Vant)
 Vue.config.productionTip = false

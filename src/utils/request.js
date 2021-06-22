@@ -5,9 +5,8 @@ import axios from 'axios'
 // 导入 NProgress 包对对应的 js 和 css 用作美化
 // import NProgress from 'nprogress'
 
-Vue.config.productionTip = false
 const request = axios.create({
-    baseURL: 'http://ttapi.research.itcast.cn/app/' // 默认接口路径
+    baseURL: 'http://ttapi.research.itcast.cn/app/v1_0/' // 默认接口路径
 })
 // 配置 axios 请求默认根路径
 // axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'

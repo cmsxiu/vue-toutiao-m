@@ -1,0 +1,25 @@
+// 全局样式
+
+// 引入 icon
+@import './icon/icon.less';
+
+// 登录页面问题解决
+.login-container {
+  // 解决登录页面导航栏文字颜色问题
+  .page-nav-bar {
+    background: #3296fa;
+    .van-nav-bar__title {
+      color: #fff;
+    }
+  }
+
+  // 解决登录页面输入框问题
+  .login-verification-code {
+    .van-field__control {
+      padding-right: 12px;
+      border-right: 2px solid #ddd;
+    }
+  }
+}
+
+//

@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+# 设计稿不参与
+/src/assets/design-draft
 
 
 # local env files

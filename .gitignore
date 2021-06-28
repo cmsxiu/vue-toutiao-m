@@ -3,6 +3,8 @@ node_modules
 /dist
 # 设计稿不参与
 /src/assets/design-draft
+# 接口文档不参与
+/src/assets/api
 
 
 # local env files

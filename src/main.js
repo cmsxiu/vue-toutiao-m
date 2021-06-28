@@ -7,14 +7,17 @@ import store from '@/store'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 
-// 引入动态设置rem基准值
+// 引入 动态设置rem基准值
 import 'amfe-flexible'
 
-// 引入axios
-import '@/utils/request.js'
+// 引入 axios
+import '@/utils/request'
 
-// 引入icon
+// 引入 icon
 import '@/styles/global.less'
+
+// 引入 dayjs
+import '@/utils/dayjs'
 
 Vue.use(Vant)
 Vue.config.productionTip = false

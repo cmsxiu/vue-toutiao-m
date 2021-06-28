@@ -2,23 +2,25 @@
  * 请求模块
  */
 import axios from 'axios'
+import store from '@/store'
 // 导入 NProgress 包对对应的 js 和 css 用作美化
 // import NProgress from 'nprogress'
 
-const request = axios.create({
-    baseURL: 'http://ttapi.research.itcast.cn/app/v1_0/' // 默认接口路径
-})
 // 配置 axios 请求默认根路径
-// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
-
+const request = axios.create({
+    baseURL: 'http://ttapi.research.itcast.cn/' // 默认接口路径
+})
 // 配置 axios 请求头
-// axios.interceptors.request.use(config => {
-// 在 request 拦截器中，展示进度条 NProgress.start()
-// NProgress.start()
-// config.headers.Authorization = window.sessionStorage.getItem('token')
-// 必须ruturn config
-// return config
-// })
+request.interceptors.request.use(config => {
+    const { token } = store.state
+    // 在 request 拦截器中，展示进度条 NProgress.start()
+    // NProgress.start()
+    if (token && token.token) {
+        config.headers.Authorization = `Bearer ${token.token}`
+    }
+    // 必须ruturn config
+    return config
+})
 
 // 添加一个响应拦截器
 // axios.interceptors.response.use(config => {

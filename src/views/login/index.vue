@@ -4,6 +4,8 @@
     <van-nav-bar
       class="page-nav-bar"
       title="登录"
+      left-arrow
+      @click-left="$router.back()"
     />
     <!-- 导航栏 end -->
 
@@ -132,11 +134,14 @@ export default {
       })
       try {
         const { data: res } = await login(this.loginForm)
-        this.$toast.success('登录成功')
-        console.log(res)
-
         // 存储 token 到 vuex
         this.$store.commit('setToken', res.data)
+
+        // 登录成功提示
+        this.$toast.success('登录成功')
+
+        // 跳转页面
+        this.$router.back()
       } catch (err) {
         if (err.response.status === 400) {
           this.$toast.fail('请检查手机号或验证码')

@@ -37,10 +37,13 @@
       />
       <div
         slot="nav-right"
-        class="nav-right"
+        class="hamburger-btn"
         @click="showPopup"
       >
-        <i class="toutiao toutiao-gengduo"></i>
+        <van-icon
+          name="plus"
+          class="toutiao-plus"
+        />
       </div>
     </van-tabs>
     <!-- tab 导航栏 end -->
@@ -161,15 +164,16 @@ export default {
 
     // 未选中状态
     .van-tab {
-      min-width: 200px;
-      border-right: 1px solid #edeff3;
+      padding: 0 30px;
+      // border-right: 1px solid #edeff3;
       box-sizing: border-box;
-      font-size: 28px;
+      font-size: 30px;
       color: #777;
-      &:nth-last-child(4) {
-        border-right: 0 !important;
-        padding-right: 33px;
-      }
+      white-space: nowrap;
+
+      // &:nth-last-child(4) {
+      //   border-right: 0 !important;
+      // }
     }
 
     // 选中状态
@@ -182,6 +186,7 @@ export default {
     // 父级padding
     .van-tabs__nav {
       padding-bottom: 0;
+      background: #f4f5f6;
     }
 
     // 下滑跟随线
@@ -201,7 +206,7 @@ export default {
     }
 
     // 更多
-    .nav-right {
+    .hamburger-btn {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -209,11 +214,10 @@ export default {
       right: 0;
       width: 66px;
       height: 82px;
-      background-color: #fff;
-      background-color: rgba(255, 255, 255, 0.902);
+      background-color: #f4f5f6;
       i {
-        font-size: 32px;
-        color: #333333;
+        font-size: 40px;
+        color: #f85959;
       }
       &::before {
         position: absolute;

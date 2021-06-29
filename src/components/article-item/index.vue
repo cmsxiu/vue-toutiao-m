@@ -92,6 +92,8 @@ export default {
   .title {
     font-size: 32px;
     color: #3a3a3a;
+    // 针对英文，强制换行
+    word-break: break-all;
   }
   .cover-wrap {
     display: flex;
@@ -106,7 +108,7 @@ export default {
       }
 
       .cover-item-img {
-        width: 232px;
+        width: 226px;
         height: 146px;
       }
     }

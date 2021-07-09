@@ -12,6 +12,7 @@
         class="search-btn"
         slot="title"
         round
+        to="/search"
       >搜索</van-button>
     </van-nav-bar>
     <!-- 搜索导航栏 end -->

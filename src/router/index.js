@@ -30,6 +30,10 @@ const routes = [
         component: () => import(/* webpackName: "layout" */ '@/views/my')
       }
     ]
+  }, {
+    path: '/search',
+    name: 'search',
+    component: () => import(/* webpackName: "search" */ '@/views/search')
   }
 ]
 

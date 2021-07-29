@@ -5,6 +5,8 @@
       clickable
       class="article-item"
       border
+      is-link
+      :to="'/article/' + article.art_id"
     >
       <!-- 标题 -->
       <div

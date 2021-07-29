@@ -34,6 +34,15 @@ const routes = [
     path: '/search',
     name: 'search',
     component: () => import(/* webpackName: "search" */ '@/views/search')
+  }, {
+    path: '/article/:articleId',
+    name: 'article',
+    component: () => import(/* webpackName: "article" */ '@/views/article'),
+    props: true // 开启props传参，把路由的参数，映射到组件的props里
+  }, {
+    path: '/my/user-profile',
+    name: 'user-profile',
+    component: () => import('@/views/user-profile')
   }
 ]
 

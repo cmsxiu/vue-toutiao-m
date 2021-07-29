@@ -34,6 +34,7 @@
               <van-button
                 type="primary"
                 round
+                to="/my/user-profile"
               >编辑资料</van-button>
             </div>
           </div>

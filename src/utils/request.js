@@ -3,12 +3,20 @@
  */
 import axios from 'axios'
 import store from '@/store'
+import JSONbigint from 'json-bigint'
 // 导入 NProgress 包对对应的 js 和 css 用作美化
 // import NProgress from 'nprogress'
 
 // 配置 axios 请求默认根路径
 const request = axios.create({
-    baseURL: 'http://ttapi.research.itcast.cn/' // 默认接口路径
+    baseURL: 'http://ttapi.research.itcast.cn/', // 默认接口路径
+    transformResponse: [function (data) {
+        try {
+            return JSONbigint.parse(data)
+        } catch (error) {
+            return data
+        }
+    }]
 })
 // 配置 axios 请求头
 request.interceptors.request.use(config => {

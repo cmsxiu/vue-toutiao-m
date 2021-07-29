@@ -51,7 +51,7 @@ export default {
 
         // 本次加载完成后，设置状态为结束
         this.loading = false
-        // 判断数据还有数据
+        // 判断是否还有数据
         if (results.length) {
           this.page++
         } else {

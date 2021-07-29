@@ -34,6 +34,8 @@ module.exports = {
             // * 表示所有
             propList: ['*'],
             // propList: ['height] 只转换 height 的值
+            // 配置不要转换的文件名
+            exclude: 'github-markdown'
         },
     },
 };

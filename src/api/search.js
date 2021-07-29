@@ -10,8 +10,8 @@ import request from '@/utils/request'
  */
 export const getSuggestion = q => {
     return request({
-        url: 'app/v1_0/suggestion',
         methods: 'GET',
+        url: 'app/v1_0/suggestion',
         params: {
             q
         }
@@ -26,8 +26,8 @@ export const getSuggestion = q => {
  */
 export const getResult = params => {
     return request({
-        url: 'app/v1_0/search',
         methods: 'GET',
+        url: 'app/v1_0/search',
         params
     })
 }
@@ -41,8 +41,8 @@ export const getResult = params => {
 
 export const getHistories = params => {
     return request({
-        url: 'app/v1_0/histories',
         methods: 'GET',
+        url: 'app/v1_0/histories',
         params
     })
 }
@@ -54,8 +54,8 @@ export const getHistories = params => {
  */
 export const delHistories = params => {
     return request({
-        url: 'app/v1_0/histories',
         methods: 'DELETE',
+        url: 'app/v1_0/histories',
         params
     })
 }

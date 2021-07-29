@@ -16,3 +16,60 @@ export const getArticles = params => {
         params
     })
 }
+
+/**
+ * 获取文章详情
+ * @param params articleId 文章ID
+ */
+export const getArticlesMain = articleId => {
+    return request({
+        url: 'app/v1_0/articles/' + articleId,
+        methods: 'GET'
+    })
+}
+
+/**
+ * 收藏
+ */
+export const addCollect = target => {
+    return request({
+        method: 'POST',
+        url: 'app/v1_0/article/collections',
+        data: {
+            target
+        }
+    })
+}
+
+/**
+ * 取消收藏
+ */
+export const delCollect = target => {
+    return request({
+        method: 'DELETE',
+        url: 'app/v1_0/article/collections/' + target
+    })
+}
+
+/**
+ * 点赞
+ */
+export const addLike = target => {
+    return request({
+        method: 'POST',
+        url: 'app/v1_0/article/likings',
+        data: {
+            target
+        }
+    })
+}
+
+/**
+ * 取消点赞
+ */
+export const delLike = target => {
+    return request({
+        method: 'DELETE',
+        url: 'app/v1_0/article/likings/' + target
+    })
+}

@@ -11,10 +11,8 @@ module.exports = {
             config.set('externals', {
                 vue: 'Vue',
                 'vue-router': 'VueRouter',
-                vuux: 'Vuex',
                 axios: 'axios',
-                cropperjs: 'cropperjs',
-                vant: 'Vant'
+                vant: 'vant'
             })
             // 首页优化
             config.plugin('html').tap(args => {

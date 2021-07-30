@@ -13,6 +13,7 @@ export default new Vuex.Store({
   },
   mutations: {
     setToken (state, data) {
+      console.log(data)
       state.token = data
       // 防止刷新丢失，把数据备份到本地存储
       setItem(TOKEN_KEY, state.token)

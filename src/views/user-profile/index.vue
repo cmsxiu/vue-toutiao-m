@@ -126,6 +126,7 @@ export default {
       // 展示预览图片
       const file = this.$refs.file.files[0]
       this.img = window.URL.createObjectURL(file)
+      console.log(this.img)
       this.upDatePhotoShow = true
       // 同一个文本不触发change，每次使用完毕，清空图片即可
       this.$refs.file.value = ''

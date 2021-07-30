@@ -7,37 +7,37 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import(/* webpackName: "login" */ '@/views/login')
+    component: () => import(/* webpackChunkName: "login" */ '@/views/login')
   }, {
     path: '/',
-    component: () => import(/* webpackName: "layout" */ '@/views/layout'),
+    component: () => import(/* webpackChunkName: "layout" */ '@/views/layout'),
     children: [
       {
         path: '',
         name: 'home',
-        component: () => import(/* webpackName: "layout" */ '@/views/home')
+        component: () => import(/* webpackChunkName: "layout" */ '@/views/home')
       }, {
         path: '/video',
         name: 'video',
-        component: () => import(/* webpackName: "layout" */ '@/views/video')
+        component: () => import(/* webpackChunkName: "layout" */ '@/views/video')
       }, {
         path: '/qa',
         name: 'qa',
-        component: () => import(/* webpackName: "layout" */ '@/views/qa')
+        component: () => import(/* webpackChunkName: "layout" */ '@/views/qa')
       }, {
         path: '/my',
         name: 'my',
-        component: () => import(/* webpackName: "layout" */ '@/views/my')
+        component: () => import(/* webpackChunkName: "layout" */ '@/views/my')
       }
     ]
   }, {
     path: '/search',
     name: 'search',
-    component: () => import(/* webpackName: "search" */ '@/views/search')
+    component: () => import(/* webpackChunkName: "search" */ '@/views/search')
   }, {
     path: '/article/:articleId',
     name: 'article',
-    component: () => import(/* webpackName: "article" */ '@/views/article'),
+    component: () => import(/* webpackChunkName: "article" */ '@/views/article'),
     props: true // 开启props传参，把路由的参数，映射到组件的props里
   }, {
     path: '/my/user-profile',
